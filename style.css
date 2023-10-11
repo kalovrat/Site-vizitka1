@@ -1,0 +1,626 @@
+/* Шрифты */
+@font-face {
+    font-family: 'Kolker Brush';
+    src: url('fonts\\KolkerBrush-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Cramaten';
+    src: url('fonts/Cramaten.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Zaychik';
+    src: url('fonts/Zaychik-Regular.ttf') format('truetype');
+}
+@keyframes sway {
+    0% { transform: rotate(90deg); }
+    25% { transform: rotate(95deg); }
+    50% { transform: rotate(90deg); }
+    75% { transform: rotate(87deg); }
+    100% { transform: rotate(90deg); }
+  }
+  @keyframes sway2 {
+    0% { transform: scaleY(-1) rotate(270deg); }
+    25% { transform:  scaleY(-1) rotate(275deg); }
+    50% { transform: scaleY(-1) rotate(270deg); }
+    75% { transform: scaleY(-1) rotate(267deg); }
+    100% { transform: scaleY(-1) rotate(270deg); }
+
+  }
+  @keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-2px); }
+    50% { transform: translateX(2px); }
+    75% { transform: translateX(-2px); }
+    100% { transform: translateX(2px); }
+}
+@keyframes shak2e {
+    0% { transform: translateX(0) }
+    25% { transform: translateX(-2px)  }
+    50% { transform: translateX(2px)}
+    75% { transform: translateX(-2px)  }
+    100% { transform: translateX(2px)  }
+}
+@keyframes flicker {
+	0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+	
+    opacity: .99;
+		
+	}
+	20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+		opacity: 0.4;
+	}
+}
+@keyframes flicker_color {
+	0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+	
+    color: #5ab24b;
+		
+	}
+	20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+	color: #5ab34b6b;
+	}
+}
+
+.flicker-text{
+    animation: flicker 3s linear infinite;
+    
+}
+.ft2{
+    animation: flicker_color  3s linear infinite;
+}
+.shaking-text {
+    animation: shake 5s infinite alternate; /* Применение анимации */
+}
+.lilly1 {
+    width: 668.456px;
+    height: 400.776px;
+    transform: rotate(90deg);
+    flex-shrink: 0;
+    margin-left: -239px;
+    margin-top: 110px;
+    animation: sway 12s infinite ease;
+}
+.lilly2 {
+    height: 400.776px;
+    flex-shrink: 0;
+    transform: scaleY(-1) rotate(270deg);
+    margin-top: 110px;
+    animation: sway2 12s infinite ease;
+}
+
+/* Стили страницы */
+html {
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  
+ 
+  
+}
+
+body {
+    background-color: #0C160C;
+    margin: 0;
+    box-shadow: 0px 38px 24px 6px #ffffff4a;
+}
+
+/* Шапка */
+.header {
+    background-color: #0C160C;
+
+    height: 500px;
+}
+
+/* Маска */
+.demon-mask {
+    background:  url(images/dragon.svg);
+    width: 805px;
+    height: 884px;
+    flex-shrink: 0;
+    
+}
+
+
+
+
+
+
+
+
+
+/* Внутренняя часть шапки */
+.inner-header {
+    width: 1263px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Заголовок */
+.h1_main {
+    color: #CF1000;
+    text-align: center;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: 'Kolker Brush';
+    font-size: 120px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 5%;
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+/* Блок заголовка */
+.h1_main_block {
+    position: absolute;
+    width: 1263px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 167px;
+}
+
+.h1_main_block > div {
+    
+}
+
+/* Левая часть треугольника */
+
+/* Блоки с изображением треугольника */
+.lilly_block1 {
+    position: absolute;
+    overflow: hidden;
+    height: 714.776px;
+    margin-top: 20px;
+    
+}
+
+.lilly_block2 {
+    position: absolute;
+    overflow: hidden;
+    height: 714.776px;
+    margin-top: 20px;
+    margin-left: 845px;
+    width: 420px;
+}
+
+/* Правая часть треугольника */
+
+
+/* Основная часть страницы */
+.main-part {
+    min-height: 1000px;
+
+    background-color: #0C160C;
+    display: flex;
+}
+
+/* Описание */
+.ticket {
+    width: 600px;
+    height: 268.656px;
+    transform: rotate(15deg);
+    flex-shrink: 0;
+    background: linear-gradient( rgb(0 0 0 / 2%), rgb(0 0 0 / 41%) ), url(images/paper.jpg);
+    margin-bottom: 37.8px;
+    transform: 2s ease;
+   
+}
+.description> div{
+    position: absolute;
+    transition: 1.5s ease-out; 
+}
+.description {
+    margin-top: 291px;
+   overflow: hidden;
+    /* margin-right: 1px; */    min-height: 1300px;
+    width: 540px;
+    padding-top: 62px;
+    animation: shak2e 5s infinite alternate;
+}
+
+.ticket > h1 {
+    color: rgba(169, 13, 13, 0.79);
+    font-family: 'Cramaten';
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 125.5%;
+    letter-spacing: -0.75px;
+}
+
+/* Треугольник */
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 84px solid transparent;
+    border-right: 84px solid transparent;
+    border-bottom: 100px solid #0C160C;
+    transform: rotate(270deg);
+    margin-left: 498px;
+ 
+    margin-top: -145px;
+}
+
+/* Дополнительный блок в описании */
+.des-dc {
+    position: absolute;
+    background-color: rgba(173, 14, 14, 0.38);
+    border-radius: 100%;
+    margin-top: 63px;
+    width: 140px;
+    height: 137px;
+}
+@media (min-width: 1280px) {
+  html {
+    overflow-x: hidden;
+    min-width: 1263px;
+  }
+}
+@media (max-width: 800px) {
+  html{
+    min-width: 680px !important;
+  }
+  body{
+    min-width: 680px !important;
+  }
+  .h1_main_block {
+    min-width: 680px !important;
+    width: 680px !important;
+  }
+  .inner-header {
+    min-width: 680px !important;
+    width: 680px !important;
+  }
+  .h1_main {
+    font-size: 70px;
+   
+  }
+  .demon-mask {
+  background-size: cover;
+  width: 585px;
+  height: 585px;
+  }
+  .lilly1 {
+    width: 410.456px;
+    height: 225.776px;
+    margin-left: -166px;}
+  .lilly_block2 {
+    position: absolute;
+    overflow: hidden;
+    height: 714.776px;
+    margin-top: 20px;
+    margin-left: 422px;
+    width: 258px;}
+  .lilly2 {
+        width: 410.456px;
+        height: 225.776px;}
+  .main-part{
+        display: block;
+        }
+  .description {
+          margin-top: 13px;
+          min-height: 748px;}
+  .drag-element{
+    display: none;
+  }
+  .what-we-do {
+    margin-top: -460px
+  }
+  .zay-text-1{
+    width: 680px  !important;
+  }
+}
+@media (max-width:376px){
+ 
+  body {
+      min-width: 375px !important;
+      max-width: 375px;
+
+  }
+  .inner-header {
+    min-width: 375px !important;
+    width: 375px !important;
+} 
+.description {
+  margin-top: -81px;
+  min-height: 748px;
+  
+}
+  .lilly1{
+    width: 289.456px;
+    height: 172.776px;
+    margin-left: -135px;
+  }
+  .demon-mask {
+    background-size: cover;
+    width: 449px;
+    height: 448px;
+  }
+  .lilly2{
+    width: 289.456px;
+    height: 172.776px;
+    
+  }
+  .lilly_block2{
+    margin-left: 225px;
+    width: 149px;
+  }
+  .h1_main_block {
+    min-width: 375px !important;
+    width: 375px !important;
+    margin-top: 140px;
+}
+  .h1_main {
+    font-size: 46px;}
+  .ticket{
+    transform: rotate(0deg);
+  }
+}
+
+.description > div1 {
+    transform: rotate(15deg);
+}
+/* второй блок с услугами */
+.what-we-do{
+
+}
+
+.uslugy{
+    width: 591px;
+    height: 511px;
+    margin-left: 49px;
+    margin-top: 513px;
+   
+}
+.zay-text{
+    color: #5AB34B;
+text-align: center;
+font-feature-settings: 'clig' off, 'liga' off;
+font-family: Zaychik;
+font-size: 45px;
+font-style: normal;
+font-weight: 400;
+line-height: 130%; /* 58.5px */
+margin-top: -105px;
+position: absolute;
+width: 226px;
+}
+.ax-hidden {
+    visibility: hidden;
+    position: absolute;
+  }
+  
+  /* carousel styles */
+  .carousel {
+    --carousel-height: 400px;
+    --carousel-width: 1000px;
+    --carousel-item-height: 150px;
+    --carousel-item-width: 150px;
+  
+    width: 100%;
+  }
+  
+  .carousel-container {
+    align-items: center;
+    display: flex;
+    min-height: var(--carousel-height);
+    margin: 0 auto;
+    max-width: var(--carousel-width);
+    position: relative;
+  }
+  
+  .carousel-item {
+    height: var(--carousel-item-height);
+    opacity: 0;
+    position: absolute;
+    transform: translateX(-50%);
+    
+    transition: all 0.3s ease-in-out;
+    width: calc(var(--carousel-item-width) * 0.6);
+    border-radius: 10px;
+    z-index: 0;
+    display: flex;
+    justify-content: center;
+    background-size: cover;
+  }
+  
+  .carousel-item-1 {
+    left: 15%;
+    opacity: 0.4;
+    filter: blur(2px);
+    opacity: 0.5;
+  }
+  
+  .carousel-item-2,
+  .carousel-item-4 {
+    height: calc(var(--carousel-item-height) * 1.5);
+    opacity: 1;
+    width: calc(var(--carousel-item-width) * 0.9);
+    border-radius: 11px;
+    z-index: 1;
+    filter: blur(1px);
+    opacity: 0.9;
+  }
+  
+  .carousel-item-2 {
+    left: 30%;
+  }
+  
+  .carousel-item-3 {
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.45), 0 0 110px rgba(255, 255, 255, 0.25), 0 0 100px rgba(255, 255, 255, 0.1);
+    height: calc(var(--carousel-item-height) * 2);
+    opacity: 1;
+    left: 50%;
+    width: calc(var(--carousel-item-width) * 1.293);
+    border-radius: 23px;
+    z-index: 2;
+  }
+  
+  .carousel-item-4 {
+    left: 70%;
+    
+  }
+  
+  .carousel-item-5 {
+    left: 85%;
+    opacity: 0.4;filter: blur(2px);
+    opacity: 0.5;
+  }
+  
+  .carousel-controls {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+  }
+  
+  /* carousel button styles */
+  .carousel-control {  
+    background-color: transparent;
+    border: none;
+    border-radius: 4px;
+    color: #CF1000;
+    cursor: pointer;
+    height: 22px;
+    margin: 0 20px;
+    position: relative;
+    transform: scale(1.5);
+    transition: transform 0.5s ease-out;
+    width: 22px;
+    font-size: 30px;
+    font-family: Kolker Brush;
+  }
+  
+  .carousel-control:hover {
+    transform: scale(1.3);
+  }
+  
+  /* previous button */
+  .carousel-control-previous::after,
+  .carousel-control-previous::before {
+    box-sizing: border-box; 
+    content: '';
+    display: block;
+    height: 8px;
+    position: absolute;
+    top: 5px
+  }
+  .carousel-control-previous::before {
+    background: currentColor;
+    border-radius: 2px;
+    right: 11px;
+    width: 2px;
+  }
+  .carousel-control-previous::after {
+    border-bottom: 4px solid transparent;
+    border-right: 5px solid;
+    border-top: 4px solid transparent;
+    right: 5px;
+    width: 0;
+  }
+  
+  /* next button */
+  .carousel-control-next::after,
+  .carousel-control-next::before {
+    box-sizing: border-box;
+    content: "";
+    display: block;
+    height: 8px;
+    position: absolute;
+    top: 5px
+  }
+  .carousel-control-next::before {
+    background: currentColor;
+    border-radius: 2px;
+    left: 11px;
+    width: 2px;
+  }
+  .carousel-control-next::after {
+    border-bottom: 4px solid transparent;
+    border-left: 5px solid;
+    border-top: 4px solid transparent;
+    left: 5px;
+    width: 0;
+  }
+  
+  /* play button */
+  .carousel-control-play::before {
+    border-bottom: 5px solid transparent;
+    border-left: 6px solid;
+    border-top: 5px solid transparent;
+    box-sizing: border-box;
+    content: "";
+    display: block;
+    height: 10px;
+    position: absolute;
+    left: 7px;
+    top: 4px;
+    width: 0;
+  }
+  
+  /* pause button */
+  .carousel-control-play.playing::before {
+    border-bottom: 0;
+    border-left: 2px solid;
+    border-right: 2px solid;
+    border-top: 0;
+    box-sizing: border-box;
+    content: "";
+    display: block;
+    height: 6px;
+    position: absolute;
+    left: 6px;
+    top: 6px; 
+    width: 6px;
+  }
+  
+  /* add button */
+  .carousel-control-add::after,
+  .carousel-control-add::before {
+    background: currentColor;
+    border-radius: 5px;
+    box-sizing: border-box;
+    content: "";
+    display: block;
+    height: 2px;
+    position: absolute;
+    left: 4px;
+    top: 8px;
+    width: 10px;
+  }
+  .carousel-control-add::after {
+    height: 10px;
+    left: 8px;
+    top: 4px;
+    width: 2px;
+  }
+/*contacts */
+.contacts{
+    width: 618px;
+    height: 346px;
+    background: rgba(24, 24, 24, 0.88);
+   
+    display: flex;
+    }
+.cont-text{
+    color: #D8FFFF;
+font-family: Cramaten;
+font-size: 50px;
+font-style: normal;
+font-weight: 400;
+line-height: 125.5%; /* 62.75px */
+letter-spacing: -0.75px;
+}
+
+.description> div:hover{
+    transform: rotate(-15deg);
+    margin-left: 30px;
+}
+.drag-element {
+   
+    cursor: grab;
+    transition: all 0.3s;
+  }
